@@ -1,0 +1,37 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Use the latest version of pre-commit-hooks
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: detect-private-key
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: pretty-format-json
+      - id: check-ast
+      - id: check-added-large-files
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Use the latest version of pre-commit-hooks
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: detect-private-key
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: pretty-format-json
+      - id: check-ast
+      - id: check-added-large-files
+  # Add a hook for adding copyright text
+  - repo: local
+    hooks:
+      - id: add-copyright
+        name: Add Copyright
+        entry: ./add_copyright.py
+        language: system
+        types: [file]
+        files: '\.cc$'
+        verbose: true

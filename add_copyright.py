@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/homebrew/bin/python3
 
 import os
 import sys
@@ -14,7 +14,7 @@ def add_copyright(file_path):
     if COPYRIGHT_TEXT not in content:
         print("Adding copyright to", file_path)
         with open(file_path, 'w') as f:
-            f.write(COPYRIGHT_TEXT + content)
+            f.write(COPYRIGHT_TEXT + "\n" + content)
 
 if __name__ == "__main__":
     for file_path in sys.argv[1:]:
