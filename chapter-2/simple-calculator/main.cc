@@ -24,10 +24,10 @@ int main(){
   }
 
   double num1 {std::stod(tokens.at(0))};
-  char operation {tokens.at(1).at(0)};
+  char op {tokens.at(1).at(0)};
   double num2 {std::stod(tokens.at(2))};
 
-  std::cout << num1 << " " << operation << " " << num2 << " = " << calculate(num1, operation, num2) << '\n';
+  std::cout << num1 << " " << op << " " << num2 << " = " << calculate(num1, op, num2) << '\n';
 
   return 0;
 }
