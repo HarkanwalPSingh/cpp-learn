@@ -18,5 +18,5 @@ def add_copyright(file_path):
 
 if __name__ == "__main__":
     for file_path in sys.argv[1:]:
-        if file_path.endswith('.cc') or file_path.endswith('.cpp'):
+        if file_path.endswith('.cc') or file_path.endswith('.cpp') or file_path.endswith('.h'):
             add_copyright(file_path)
